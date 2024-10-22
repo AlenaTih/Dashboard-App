@@ -37,6 +37,7 @@ export async function fetchLatestInvoices() {
       ORDER BY invoices.date DESC
       LIMIT 5`
 
+    // This ensures you return unique invoices
     // const data = await sql<LatestInvoiceRaw>`
     //   SELECT DISTINCT ON (invoices.id) invoices.amount, customers.name, customers.image_url, customers.email, invoices.id
     //   FROM invoices
