@@ -26,5 +26,5 @@ export const authConfig = {
         return url.startsWith(`${baseUrl}/dashboard`) ? url : `${baseUrl}/dashboard`
       },
     },
-      providers: [], // Add providers with an empty array for now
+    providers: [], // Add providers with an empty array for now
 } satisfies NextAuthConfig

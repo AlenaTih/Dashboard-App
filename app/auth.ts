@@ -1,7 +1,7 @@
 import NextAuth from "next-auth"
 import { authConfig } from "./auth.config"
 import Credentials from "next-auth/providers/credentials"
-import GitHub from "next-auth/providers/github"
+// import GitHub from "next-auth/providers/github"
 import { z } from "zod"
 import { sql } from "@vercel/postgres"
 import type { User } from "@/app/lib/definitions"
@@ -33,7 +33,7 @@ export const { handlers, auth, signIn, signOut } = NextAuth({
                 const passwordsMatch = await bcrypt.compare(password, user.password)
  
                 if (passwordsMatch) {
-                  console.log("Logged in")
+                  // console.log("Logged in")
                   return user
                 }
               }
@@ -42,6 +42,6 @@ export const { handlers, auth, signIn, signOut } = NextAuth({
               return null
         },
       }),
-      GitHub,
+      // GitHub,
   ],
 })
